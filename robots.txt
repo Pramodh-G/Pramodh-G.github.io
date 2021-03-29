@@ -1,0 +1,4 @@
+Sitemap: pramodh-g.github.io/sitemap.xml
+
+User-agent: *
+Disallow:
