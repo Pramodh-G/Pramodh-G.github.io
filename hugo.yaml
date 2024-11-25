@@ -1,0 +1,52 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'YABG (yet another blog/gallery)'
+copyright: "Pramodh Gopalan (CC BY 4.0)"
+enableRobotsTXT: true
+
+# Have a combination of the gallery theme and the bearcub theme!
+theme:
+  - hugo-bear-gallery
+  - hugo-bearcub
+
+# Setup syntax highlighting without inline styles. For more information about
+# why you'd want to avoid inline styles, see
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
+markup:
+  highlight:
+    lineNos: true
+    lineNumbersInTable: false
+    # This allows Bear Cub to use a variation of Dracula that is more accessible
+    # to people with poor eyesight. For more information about color contrast
+    # and accessibility, see https://web.dev/color-and-contrast-accessibility/
+    noClasses: false
+
+params:
+  title: "YABG (yet another blog/gallery!)"
+  dateFormat: "January 2, 2006"
+  author:
+    name: Pramodh Gopalan
+    email: pramodh161201@gmail.com
+
+  albums:
+    - name: Portfolio
+      albumCover: "/images/death.jpg"
+      url: /gallery/portfolio
+    - name: portfolio2
+      albumCover: "/images/death.jpg"
+      url: /gallery/portfolio
+    - name: portfolio3
+      albumCover: "/images/death.jpg"
+      url: /gallery/portfolio
+
+menu:
+  main:
+    - name: "Home"
+      url: /
+      weight: 1
+    - name: "Gallery"
+      url: /gallery
+      weight: 2
+    - name: "About"
+      url: /about
+      weight: 3

@@ -1,0 +1,9 @@
+{{ if and .Parent .Parent.Title  }}
+  <a href="{{ .Parent.RelPermalink }}"> Back to {{ .Parent.Title }}</a>
+{{ end }}
+
+{{ range .Site.Menus.main.ByWeight }}
+  <a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+
+<a href='{{ absURL "index.xml" }}'>RSS</a>

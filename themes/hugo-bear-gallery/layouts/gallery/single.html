@@ -1,0 +1,25 @@
+{{ define "main" }}
+    <article>
+        <header>
+            <h1>{{ .Title }}</h1>
+                <time datetime="{{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}">
+                </time>
+        </header>
+
+        {{ with .Params.description }}
+            <p class="image-description">{{ . }}</p>
+        {{ end }}
+
+        <div class="single-image-container">
+            <img src="{{ .Params.image }}"
+                 alt="{{ .Title }}"
+                 loading="lazy">
+        </div>
+
+        {{ with .Content }}
+            <div class="content">
+                {{ . }}
+            </div>
+        {{ end }}
+    </article>
+{{ end }}

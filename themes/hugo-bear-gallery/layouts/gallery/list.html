@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+{{ with .Content }}
+<div class="content">
+{{ . }}
+</div>
+{{ end }}
+
+<!-- Main gallery page showing album grid -->
+<div class="album-grid">
+{{ range .Site.Params.albums }}
+<a href="{{ .url }}" class="album-card">
+    <img src="{{ .albumCover }}" alt="{{ .name }}" loading="lazy">
+    <h2>{{ .name }}</h2>
+</a>
+{{ end }}
+</div>
+{{ end }}

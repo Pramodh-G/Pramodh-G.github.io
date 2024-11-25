@@ -1,0 +1,4 @@
+{{ if eq .Type "gallery" }}
+  {{ $galleryCSS := resources.Get "css/gallery.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $galleryCSS.RelPermalink }}">
+{{ end }}
