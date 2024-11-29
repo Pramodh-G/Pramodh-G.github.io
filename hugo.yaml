@@ -32,12 +32,7 @@ params:
     - name: Portfolio
       albumCover: "/images/death.jpg"
       url: /gallery/portfolio
-    - name: portfolio2
-      albumCover: "/images/death.jpg"
-      url: /gallery/portfolio
-    - name: portfolio3
-      albumCover: "/images/death.jpg"
-      url: /gallery/portfolio
+
 
 menu:
   main:
