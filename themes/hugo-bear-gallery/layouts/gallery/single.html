@@ -6,10 +6,6 @@
                 </time>
         </header>
 
-        {{ with .Params.description }}
-            <p class="image-description">{{ . }}</p>
-        {{ end }}
-
         <div class="single-image-container">
             <img src="{{ .Params.image }}"
                  alt="{{ .Title }}"
