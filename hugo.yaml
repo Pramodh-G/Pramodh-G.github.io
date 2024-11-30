@@ -22,7 +22,7 @@ markup:
     noClasses: false
 
 params:
-  title: "YABG (yet another blog/gallery!)"
+  title: "YAGB (yet another gallery/blog!)"
   dateFormat: "January 2, 2006"
   author:
     name: Pramodh Gopalan
@@ -36,12 +36,15 @@ params:
 
 menu:
   main:
-    - name: "Home"
+    - name: Home
       url: /
       weight: 1
-    - name: "Gallery"
-      url: /gallery
-      weight: 2
-    - name: "About"
+    - name: About
       url: /about
+      weight: 2
+    - name: Blog
+      url: /blog
       weight: 3
+    - name: Gallery
+      url: /gallery
+      weight: 4
