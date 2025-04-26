@@ -28,12 +28,6 @@ params:
     name: Pramodh Gopalan
     email: pramodh161201@gmail.com
 
-  albums:
-    - name: Portfolio
-      albumCover: "/images/death.jpg"
-      url: /gallery/portfolio
-
-
 menu:
   main:
     - name: Home

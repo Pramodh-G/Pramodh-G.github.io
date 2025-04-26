@@ -1,20 +1,16 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
-
 {{ with .Content }}
 <div class="content">
   {{ . }}
 </div>
 {{ end }}
 
-<ul class="post-list">
+<div class="image-grid">
   {{ range .Pages.ByDate.Reverse }}
-  <li>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    {{ if not .Date.IsZero }}
-    <span class="post-date">{{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}</span>
-    {{ end }}
-  </li>
+  <a href="{{ .Permalink }}" class="image-card">
+    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+  </a>
   {{ end }}
-</ul>
+</div>
 {{ end }}

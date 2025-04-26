@@ -1,9 +1,10 @@
 ---
 title: "Death"
+location: "IIT Kanpur, UP, India"
 date: 2023-03-23
 image: "/images/death.jpg"
 ---
 
-_Death_ - captured during the final breaths of spring at IITK. As my college years drew to a close, I found myself obsessively color grading every image I could find, perhaps a subconscious attempt to preserve these fleeting moments.
+_Death_ - captured during my final semester at IITK. What I particularly like about the photo is that it makes me ruminate on endings - and new beginnings. College was ending. So was the life of these flowers.
 
-Fallen bougainvillea leaves - vibrant even in decay, scattered across the earth that will reclaim them. The purple lighter forms the focal point - a slow killer through cigarettes, a potential spark turning these leaves into an inferno. I found myself contemplating the delicate thread between beauty and destruction, between ending and beginning.
+However, it is due to these very flowers that new life blooms. I was about to start a new job, in a completely new place. New leaves were cropping up through any gaps they could find.

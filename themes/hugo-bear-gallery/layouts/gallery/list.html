@@ -1,19 +1,23 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}
+    <div class="content">
+      {{ . }}
+    </div>
+  {{ end }}
 
-{{ with .Content }}
-<div class="content">
-{{ . }}
-</div>
-{{ end }}
+  <div class="album-grid">
+    {{ $albums := .Sections }}
+    {{ $albums = $albums.ByDate.Reverse }}
 
-<!-- Main gallery page showing album grid -->
-<div class="album-grid">
-{{ range .Site.Params.albums }}
-<a href="{{ .url }}" class="album-card">
-    <img src="{{ .albumCover }}" alt="{{ .name }}" loading="lazy">
-    <h2>{{ .name }}</h2>
-</a>
-{{ end }}
-</div>
+    {{ range $albums }}
+      {{ $album := . }}
+      {{ with .Params.albumCover }}
+        <a href="{{ $album.RelPermalink }}" class="album-card">
+          <img src="{{ . }}" alt="{{ $album.Title }}" loading="lazy">
+          <h2>{{ $album.Title }}</h2>
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
 {{ end }}

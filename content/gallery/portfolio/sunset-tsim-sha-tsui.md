@@ -1,9 +1,10 @@
 ---
-title: "A Tsim Sha Tsui Sunset"
+title: "Sunset"
+location: "Tsim Sha Tsui, Hong Kong"
 date: 2024-08-30
 image: "/images/sunset-tsim-sha-tsui.jpg"
 ---
 
-Even though it had only been 6 hours since I left India, I found myself craving Indian food during a layover in Hong Kong. After walking through a few shady alleys, I ended up in what I later came to realise was the city's vibrant _Little India_. Finishing my dinner, I stepped out to the sight of beautiful post-sunset clouds bathing everything in a purple glow.
+I'd asked the locals living in Hong Kong's Little India about the best place to see a sunset. I was wandering around aimlessly around HK during my 12 hour layover to the US.
 
-This building, caught between day and night, became a perfect metaphor for Hong Kong itself - a city where rigid geometry dissolves into natural beauty, where urban planning bows to mountain slopes, and where a 20-minute journey can take you from a bustling Kowloon to serene beaches. The photograph captures what makes Hong Kong unique: its ability to orchestrate a delicate dance between humanity and nature, each enhancing rather than diminishing the other.
+Worried that I was going to miss the sunset, I stumbled upon the promenade only to find everything bathed in pink and purple. This picture, to me captures the essence of HK. Seamlessly blending nature and human occupation.

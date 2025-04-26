@@ -1,16 +1,32 @@
 {{ define "main" }}
     <article>
-        <header>
-            <h1>{{ .Title }}</h1>
-                <time datetime="{{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}">
-                </time>
-        </header>
+        <div class="image-navigation">
+            {{ with .NextInSection }}
+            <a href="{{ .Permalink }}" class="prev-link">« Previous</a>
+            {{ else }}
+            <span class="prev-link"></span>
+            {{ end }}
+
+            {{ with .PrevInSection }}
+            <a href="{{ .RelPermalink }}" class="next-link">Next »</a>
+            {{ else }}
+            <span class="next-link"></span>
+            {{ end }}
+        </div>
 
         <div class="single-image-container">
             <img src="{{ .Params.image }}"
                  alt="{{ .Title }}"
                  loading="lazy">
+        <header>
+            <h1 class="single-image-title">{{ .Title }}</h1>
+            {{ with .Params.location }}
+            <p class="single-image-location">{{ . }}</p>
+            {{ end }}
+        </header>
         </div>
+
+
 
         {{ with .Content }}
             <div class="content">

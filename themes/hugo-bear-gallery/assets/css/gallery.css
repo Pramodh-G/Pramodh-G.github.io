@@ -1,4 +1,12 @@
 /* assets/css/gallery.css */
+body {
+    font-family: 'EB Garamond', serif;
+    max-width: 50%;
+  }
+
+html {
+    font-size: 18px; /* Example: Change this value as needed */
+  }
 
 /* Gallery List Styles */
 .album-grid {
@@ -19,7 +27,7 @@
 }
 
 .album-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
 .album-card img {
@@ -35,53 +43,96 @@
     font-size: 1.2rem;
 }
 
-/* Single Image Styles */
-.single-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
+
+.image-grid {
+    column-count: 3;
+    column-gap: 6px;
 }
 
-.single-image-container img {
-    max-width: 100%;
-    max-height: 90vh;
-    width: auto;
+.image-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100%;
+
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.image-card img {
+    width: 100%;
     height: auto;
-    object-fit: contain;
+    display: block;
 }
 
-/* Post List Styles (matching Bear Blog) */
-.post-list {
-    list-style-type: none;
-    padding: 0;
+  .image-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.2s ease;
 }
 
-.post-list li {
+  .image-card:hover::after {
+    opacity: 1;
+  }
+
+  .single-image-container {
+    text-align: center;
+    margin: -0.5rem auto
+  }
+
+  .single-image-container img {
+    max-width: 100%;
+    max-height: 67vh;
+    height: auto;
+    display: inline-block;
+  }
+
+  .single-image-title {
+    margin-bottom: -0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .single-image-location {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+  }
+
+  .image-navigation {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 0.7rem;
-    flex-wrap: wrap;
-}
-
-.post-list a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.post-list a:hover {
-    text-decoration: underline;
-}
-
-.post-date {
-    color: #666;
+    align-items: center;
+    margin: 2rem 0;
     font-size: 0.9rem;
-    white-space: nowrap;
-    margin-left: 1rem;
-}
+  }
+
+  .prev-link, .next-link {
+    flex: 0 0 auto;
+  }
+
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    .image-grid {
+        column-count: 3; /* Fewer columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        column-count: 2; /* Even fewer columns */
+    }
+}
 @media (max-width: 600px) {
     .album-grid {
         grid-template-columns: 1fr;
@@ -91,14 +142,13 @@
         max-height: 300px;
     }
 
-    .post-list li {
-        flex-direction: column;
+    .image-grid {
+        column-count: 1;
+        column-gap: 0;
     }
-
-    .post-date {
-        margin-left: 0;
-        font-size: 0.8rem;
-    }
+     .image-card {
+        margin-bottom: 10px;
+     }
 }
 
 .go-back a {
