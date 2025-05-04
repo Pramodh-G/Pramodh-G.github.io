@@ -1,7 +1,8 @@
 /* assets/css/gallery.css */
 body {
     font-family: 'EB Garamond', serif;
-    max-width: 50%;
+    max-width: 65%;
+    margin: 0 auto;
   }
 
 html {
@@ -12,14 +13,12 @@ html {
 .album-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 2rem 0;
-    text-align: center;
 }
 
 .album-card {
     text-decoration: none;
-    color: inherit;
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
@@ -32,58 +31,14 @@ html {
 
 .album-card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: 400px;
     object-fit: contain;
-    border-radius: 4px;
 }
 
-.album-card h2 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
+.image-card-title {
+  font-weight: normal;
 }
-
-
-.image-grid {
-    column-count: 3;
-    column-gap: 6px;
-}
-
-.image-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-
-    margin-bottom: 5px;
-    display: inline-block;
-    width: 100%;
-
-    position: relative;
-    text-decoration: none;
-    vertical-align: top;
-}
-
-.image-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-  .image-card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-  .image-card:hover::after {
-    opacity: 1;
-  }
 
   .single-image-container {
     text-align: center;
@@ -120,35 +75,34 @@ html {
     flex: 0 0 auto;
   }
 
-
-/* Responsive adjustments */
 @media (max-width: 1200px) {
-    .image-grid {
-        column-count: 3; /* Fewer columns on smaller screens */
-    }
+  .album-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-    .image-grid {
-        column-count: 2; /* Even fewer columns */
-    }
+  .album-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 600px) {
-    .album-grid {
-        grid-template-columns: 1fr;
-    }
+  .album-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .album-card img {
-        max-height: 300px;
-    }
+  .image-card img {
+    height: auto;
+  }
 
-    .image-grid {
-        column-count: 1;
-        column-gap: 0;
-    }
-     .image-card {
-        margin-bottom: 10px;
-     }
+  .album-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .album-card img {
+      max-height: 300px;
+  }
 }
 
 .go-back a {

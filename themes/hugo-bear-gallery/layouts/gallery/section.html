@@ -6,10 +6,11 @@
 </div>
 {{ end }}
 
-<div class="image-grid">
+<div class="album-grid">
   {{ range .Pages.ByDate.Reverse }}
-  <a href="{{ .Permalink }}" class="image-card">
+  <a href="{{ .Permalink }}" class="album-card">
     <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+    <h4 class="image-card-title">{{ .Title }}</h4>
   </a>
   {{ end }}
 </div>

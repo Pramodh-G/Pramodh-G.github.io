@@ -5,3 +5,4 @@ I have no pressure to be consistent - so hopefully that makes the blogs more int
 I draw inspiration for blogging from:
 - [Nicholas Carlini](https://nicholas.carlini.com/): Man just does whatever he wants and documents it.
 - [Sam Altman](https://blog.samaltman.com/): I once read through _every_ blog post of his, and compiled all advice I could find(meta blog post incoming?).
+- [Priyadarshi Singh](https://dryairship.github.io/): A cool college senior.
