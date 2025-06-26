@@ -12,7 +12,7 @@
   {{ end }}
 
   {{ if .Pages }}
-    <h2 class="post-list-heading">{{ i18n "latest-posts" | default "Latest Posts" }}</h2>
+    <h2> Latest Posts</h2>
   {{ end }}
 
   <ul class="blog-posts">
@@ -20,16 +20,10 @@
     <li>
       <span>
         <i>
-          <time datetime='{{ .Date.Format "2006-01-02" }}' pubdate>
-            {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
-          </time>
+            {{ .Date.Format (.Site.Params.dateFormat) }}
         </i>
       </span>
-      {{ if .Params.link }}
-        <a href="{{ .Params.link }}" target="_blank">{{ .Title }} <span class="external-link-indicator">↪</span></a> {{/* Added span for better styling */}}
-      {{ else }}
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
     </li>
     {{ else }}
       {{ if not .Data.Singular }}
