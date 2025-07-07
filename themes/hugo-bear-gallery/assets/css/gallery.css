@@ -9,6 +9,14 @@ html {
     font-size: 18px; /* Example: Change this value as needed */
   }
 
+content img {
+  display: block;
+  height: auto;
+  max-width: 40%;
+  max-height: 60%;
+  margin: 0 auto;
+}
+
 /* Gallery List Styles */
 .album-grid {
     display: grid;
